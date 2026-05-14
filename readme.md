@@ -3,18 +3,18 @@
 ## Project Description
 
 Web-based location guessing game using the Google Maps JavaScript API.
-The player is asked to find five specific locations on the CSUN campus.
-For each location, the player double-clicks on the map where they think the building is. After each guess, the map shows a green rectangle for a correct answer or a red rectangle (on the correct location) for a wrong answer.
+Find five specific locations on the CSUN campus.
+For each location, the user double-clicks on the map where they think the building is. After each guess, the map shows a green rectangle for a correct answer or a red rectangle (on the correct location) for a wrong answer.
 The game tracks the score, includes a 30-second timer per question, and stores the highest score in the browser.
-All panning and zooming are disabled.
 
-Double-click guessing,
-Disabled panning/zooming,
-Visual feedback (green/red rectangles),
-Five locations (assigned: Asian American Activities Center - B6),
-final score display,
-reset button,
-two extra features (timer and persistent high score).
+- All panning and zooming are disabled.
+- Double-click guessing,
+- Disabled panning/zooming,
+- Visual feedback (green/red rectangles),
+- Five locations (assigned: Asian American Activities Center - B6),
+- final score display,
+- reset button,
+- two extra features (timer and persistent high score).
 
 ## Files
 
@@ -23,16 +23,18 @@ two extra features (timer and persistent high score).
 - `script.js` – Game logic, Google Maps integration, event handling, timer, and high score.
 
 
-Double-click to guess:  `map.addListener("dblclick", ...)` in `initMap()` calls `checkGuess()`. 
-Panning disabled: `draggable: false` in map options. 
- Zooming disabled:`zoomControl: false`, `scrollwheel: false`, `disableDoubleClickZoom: true`. 
-Correct guess = green rectangle on correct location: `drawLocationRectangle()` with green color and opacity. 
-Incorrect guess = red rectangle on correct location: `drawLocationRectangle()` with red color and opacity on the correct bounds. 
-Prompt correct or wrong:  `showFeedback()` changes the message div. 
-Five locations: 
-After 5 guesses, show final score:  `endGame()` calculates and displays score, stops timer, updates high score. 
-Reset button: `resetGame()` clears state, resets UI, reloads first location. 
-Extra feature 1: Timer: `startTimer()` counts down 30 seconds; if time runs out, automatically marks wrong. 
+-Double-click to guess:  `map.addListener("dblclick", ...)` in `initMap()` calls `checkGuess()`. 
+-Panning disabled: `draggable: false` in map options. 
+-Zooming disabled:`zoomControl: false`, `scrollwheel: false`, `disableDoubleClickZoom: true`. 
+-Correct guess = green rectangle on correct location: `drawLocationRectangle()` with green color and opacity. 
+-Incorrect guess = red rectangle on correct location: `drawLocationRectangle()` with red color and opacity on the correct bounds. 
+-Prompt correct or wrong:  `showFeedback()` changes the message div. 
+
+-CSUN Locations: assigned Asian American Activities Center - B6 + Chicano House - D5 + JD Jacaranda Hall - E5 + Sequoia Hall - E4 + Santa Susana Hall - D2
+
+-After 5 guesses, show final score:  `endGame()` calculates and displays score, stops timer, updates high score. 
+-Reset button: `resetGame()` clears state, resets UI, reloads first location. 
+-Extra feature 1: Timer: `startTimer()` counts down 30 seconds; if time runs out, automatically marks wrong. 
 Extra feature 2: High score: `localStorage` stores the best score across sessions. 
 
 
@@ -96,8 +98,6 @@ Below are all the external resources, documentation, and tools referenced or use
 - [Google Cloud Console](https://console.cloud.google.com/)
 - [Creating and Restricting API Keys](https://cloud.google.com/docs/authentication/api-keys)
 - [HTTP Referrer Restrictions for API Keys](https://cloud.google.com/docs/authentication/api-keys#http_referrers)
-- [Enable Billing for Google Cloud Project](https://cloud.google.com/billing/docs/how-to/modify-project)
-- [Maps JavaScript API – Usage and Billing](https://developers.google.com/maps/documentation/javascript/usage-and-billing)
 
 ### Coordinate Acquisition
 
