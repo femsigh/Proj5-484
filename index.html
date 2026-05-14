@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSUN Location Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Game info panel: displays score, current location, messages, and reset button -->
+      <div class="info-panel">
+        <h1>CSUN Location Guesser</h1>
+
+        <div class="score-area">
+          <p>
+            Question: <span id="questionNum">1</span> /
+            <span id="totalQuestions">5</span>
+          </p>
+          <p>Correct: <span id="correctCount">0</span></p>
+          <p>Time: <span id="timerDisplay">30</span>s</p>
+          <p>High Score: <span id="highScoreDisplay">0</span></p>
+        </div>
+        <div id="currentLocation" class="location-prompt">
+          Find: <strong>Loading...</strong>
+        </div>
+        <div id="message" class="message"></div>
+        <button id="resetBtn" class="reset-btn">New Game</button>
+      </div>
+
+      <!-- The map element – Google Maps will be injected here -->
+      <div id="map"></div>
+    </div>
+
+    <!-- Google Maps API WITH Localization (Spanish language, Spain region) UNIQUE: LOACALIAZATION, You can change es to any language code (fr, de, ja, etc.) to demonstrate localization -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCadUC7S-ObHdBxUUCKkBwD5w4FS5zuN_o&callback=initMap&v=weekly&language=es&region=ES"
+      async
+      defer
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #8b0000; /* dark red background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Main game container */
+.container {
+  width: 1200px;
+  max-width: 95%;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Top panel */
+.info-panel {
+  background: #5a0000; /* darker red for contrast */
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.info-panel h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.score-area {
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 6px 16px;
+  border-radius: 30px;
+}
+
+.score-area p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.location-prompt {
+  background: #f1c40f; /* goldish */
+  color: #5a0000;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.location-prompt strong {
+  font-size: 1rem;
+}
+
+.message {
+  padding: 6px 14px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 0.85rem;
+}
+
+.reset-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.reset-btn:hover {
+  background: #c0392b;
+}
+
+/* Map container */
+#map {
+  height: 550px;
+  width: 100%;
+}
+
+/* Simple pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.pulse-animation {
+  animation: pulse 0.4s ease-out;
+}
