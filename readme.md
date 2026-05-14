@@ -1,4 +1,6 @@
 # CSUN Location Guessing Game
+ * PAGE: https://femsigh.github.io/Proj5-484/
+   -note ffor api doesn't work, but through localhost does
 
 ## Project Description
 
